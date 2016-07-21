@@ -1,0 +1,109 @@
+ADD a 10 20
+QUERY 0: 
+QUERY 5: 
+QUERY 10: a
+QUERY 15: a
+QUERY 20: a
+QUERY 9999: 
+CLEAR
+
+ADD a 0 10
+QUERY 0: a
+QUERY 5: a
+QUERY 10: a
+CLEAR
+
+ADD a 10 20
+ADD b 20 30
+ADD c 30 40
+QUERY 0: 
+QUERY 10: a
+QUERY 15: a
+QUERY 20: a,b
+QUERY 25: b
+QUERY 30: b,c
+QUERY 35: c
+QUERY 40: c
+CLEAR
+
+ADD a 10 20
+ADD b 20 30
+ADD c 30 40
+ADD d 15 25
+ADD e 35 40
+ADD f 0 100
+QUERY 0: f
+QUERY 5: f
+QUERY 10: a,f
+QUERY 20: a,b,d,f
+QUERY 39: c,e,f
+QUERY 99: f
+CLEAR
+
+ADD a 0 9
+ADD b 1 10
+ADD c 2 11
+ADD d 3 12
+ADD e 4 13
+ADD f 5 14
+ADD g 6 15
+ADD h 7 16
+ADD i 8 17
+ADD j 9 18
+ADD k 10 29
+QUERY 0: a
+QUERY 1: a,b
+QUERY 2: a,b,c
+QUERY 3: a,b,c,d
+QUERY 4: a,b,c,d,e
+QUERY 5: a,b,c,d,e,f
+QUERY 6: a,b,c,d,e,f,g
+QUERY 7: a,b,c,d,e,f,g,h
+QUERY 8: a,b,c,d,e,f,g,h,i
+QUERY 9: a,b,c,d,e,f,g,h,i,j
+QUERY 10: b,c,d,e,f,g,h,i,j,k
+QUERY 11: c,d,e,f,g,h,i,j,k
+QUERY 12: d,e,f,g,h,i,j,k
+QUERY 13: e,f,g,h,i,j,k
+QUERY 14: f,g,h,i,j,k
+QUERY 15: g,h,i,j,k
+QUERY 16: h,i,j,k
+QUERY 17: i,j,k
+QUERY 18: j,k
+QUERY 19: k
+QUERY 20: k
+QUERY 21: k
+CLEAR
+
+ADD a 0 100
+ADD b 50 60
+ADD c 10 90
+ADD d 85 110
+ADD e 45 55
+ADD f 40 60
+ADD g 55 65
+ADD h 50 51
+ADD i 10 20
+QUERY 0: a
+QUERY 10: a,c,i
+QUERY 20: a,c,i
+QUERY 30: a,c
+QUERY 40: a,c,f
+QUERY 50: a,b,c,e,f,h
+QUERY 51: a,b,c,e,f,h
+QUERY 60: a,b,c,f,g
+QUERY 70: a,c
+QUERY 80: a,c
+QUERY 90: a,c,d
+QUERY 100: a,d
+QUERY 110: d
+CLEAR
+
+ADD a 0 10
+ADD b 10 20
+ADD c 20 30
+ADD d 100 110
+ADD e 110 120
+ADD f 120 130
+QUERY 50: 
+CLEAR
